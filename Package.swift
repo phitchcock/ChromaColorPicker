@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "ChromaColorPicker",
     platforms: [
-        .iOS(.v10)
+        .macOS(.v10_10), .iOS(.v10)
     ],
     products: [
         .library(
@@ -23,5 +23,6 @@ let package = Package(
             dependencies: ["ChromaColorPicker"],
             path: "Tests"
         )
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
